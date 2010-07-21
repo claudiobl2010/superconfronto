@@ -1,6 +1,6 @@
 *.pyc
 superconfronto.log*
-.log
+*.log
 .project
 .pydevproject
 .settings
