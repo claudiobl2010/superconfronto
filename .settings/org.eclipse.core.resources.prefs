@@ -1,0 +1,19 @@
+#Sat Jun 26 19:24:09 BRT 2010
+eclipse.preferences.version=1
+encoding//controller/base.py=utf-8
+encoding//controller/home.py=utf-8
+encoding//models/amigo.py=utf-8
+encoding//models/aviso.py=utf-8
+encoding//models/base.py=utf-8
+encoding//models/clube.py=utf-8
+encoding//models/confronto.py=utf-8
+encoding//models/game.py=utf-8
+encoding//models/mensagem.py=utf-8
+encoding//models/time.py=utf-8
+encoding//models/time_historico.py=utf-8
+encoding//models/time_rodada.py=utf-8
+encoding//utils/cadun.py=utf-8
+encoding//utils/slug.py=utf-8
+encoding/quickstart.py=utf-8
+encoding/rotas.py=utf-8
+encoding/wsgi.py=utf-8
