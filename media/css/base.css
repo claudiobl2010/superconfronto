@@ -20,3 +20,35 @@ a:focus {
 img {
 	border: 0;
 }
+
+.sc-barra-header-publicidade-bg {
+	background-color: #F3F3F3;
+}
+
+.sc-barra-header-publicidade-conteudo {
+	background: #FF0000;
+	width: 960px;
+	height: 40px;
+	margin: 0 auto;
+}
+
+.sc-barra-header-superconfronto-bg {
+	background: transparent url(/media/img/grama2.jpg) repeat-x;
+}
+
+.sc-barra-header-superconfronto-conteudo {
+	width: 960px;
+	height: 88px;
+	margin: 0 auto;
+}
+
+.sc-barra-header-menu-bg {
+	background: #00FF00;
+	border-top: solid 1px #0000FF;
+}
+
+.sc-barra-header-menu-conteudo {
+	width: 960px;
+	height: 28px;
+	margin: 0 auto;
+}
