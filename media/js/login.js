@@ -16,13 +16,13 @@ $(document).ready(function() {
 		if ($('#id-login').val() == "" || $('#id-senha').val() == "") {
 			inner_html = '<strong>atenção!</strong>';
 			$('#id-msg-login-1').html(inner_html);
-			$('#id-msg-login-1').addClass('msg-login-1-error');
-			$('#id-msg-login-1').removeClass('msg-login-1');
+			$('#id-msg-login-1').addClass('sc-msg-login-1-error');
+			$('#id-msg-login-1').removeClass('sc-msg-login-1');
 			
 			inner_html = '<strong>login e/ou senha não preenchidos</strong>';
 			$('#id-msg-login-2').html(inner_html);
-			$('#id-msg-login-2').addClass('msg-login-2-error');
-			$('#id-msg-login-2').removeClass('msg-login-2');
+			$('#id-msg-login-2').addClass('sc-msg-login-2-error');
+			$('#id-msg-login-2').removeClass('sc-msg-login-2');
 		}
 		else {
 	        $.ajax({
@@ -37,13 +37,13 @@ $(document).ready(function() {
 					else {
 						inner_html = '<strong>atenção!</strong>';
 						$('#id-msg-login-1').html(inner_html);
-						$('#id-msg-login-1').addClass('msg-login-1-error');
-						$('#id-msg-login-1').removeClass('msg-login-1');
+						$('#id-msg-login-1').addClass('sc-msg-login-1-error');
+						$('#id-msg-login-1').removeClass('sc-msg-login-1');
 						
 						inner_html = '<strong>login e/ou senha não conferem</strong>';
 						$('#id-msg-login-2').html(inner_html);
-						$('#id-msg-login-2').addClass('msg-login-2-error');
-						$('#id-msg-login-2').removeClass('msg-login-2');
+						$('#id-msg-login-2').addClass('sc-msg-login-2-error');
+						$('#id-msg-login-2').removeClass('sc-msg-login-2');
 						
 						$('#id-login').val("");
 						$('#id-senha').val("");
@@ -53,13 +53,13 @@ $(document).ready(function() {
 				error: function() {
 					inner_html = '<strong>atenção!</strong>';
 					$('#id-msg-login-1').html(inner_html);
-					$('#id-msg-login-1').addClass('msg-login-1-error');
-					$('#id-msg-login-1').removeClass('msg-login-1');
+					$('#id-msg-login-1').addClass('sc-msg-login-1-error');
+					$('#id-msg-login-1').removeClass('sc-msg-login-1');
 					
 					inner_html = '<strong>ocorreu erro, tente novamente</strong>';
 					$('#id-msg-login-2').html(inner_html);
-					$('#id-msg-login-2').addClass('msg-login-2-error');
-					$('#id-msg-login-2').removeClass('msg-login-2');
+					$('#id-msg-login-2').addClass('sc-msg-login-2-error');
+					$('#id-msg-login-2').removeClass('sc-msg-login-2');
 					
 					$('#id-login').val("");
 					$('#id-senha').val("");
