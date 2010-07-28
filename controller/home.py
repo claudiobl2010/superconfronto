@@ -6,6 +6,7 @@ import cherrypy
 from superconfronto.controller.base import BaseController
 from superconfronto.utils.slug import slugify
 from superconfronto.utils.cadun import Cadun
+from superconfronto.utils.servicos_cartola import ServicosCartola
 
 class HomeController(BaseController):
     
@@ -32,6 +33,16 @@ class HomeController(BaseController):
             #5) Se 3 = ok atualiza informacoes do time e coloca o time no contexto.
                      
             cherrypy.session['contexto'] = contexto
+            
+            import pdb; pdb.set_trace()
+            
+            aa = ServicosCartola().get_status_mercado()
+            bb = ServicosCartola().get_time_by_cadun_id(contexto['dados_login']['cadun_id'])
+            cc = ServicosCartola().get_time_by_time_id(3421862)
+            dd = ServicosCartola().get_time_rodada(3421862, 10)
+            ee = ServicosCartola().get_time_rodada(3421862, 11)
+            ff = ServicosCartola().get_time_rodada(3421862, 12)
+            
 
             return self.render_msg(tipo=self.MSG_SUCCESS, msg="SUCCESS")
         else:
