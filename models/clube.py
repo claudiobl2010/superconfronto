@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy import Column, Integer, String
-from superconfronto.models.base import Base, get_session
+from superconfronto.models.base import Base, get_session, Repository
 
-class ClubeRepository():
+class ClubeRepository(Repository):
     pass
 
 class Clube(Base, ClubeRepository):
@@ -13,4 +13,3 @@ class Clube(Base, ClubeRepository):
     
     id = Column('clube_id', Integer, primary_key=True)   
     nome = Column('nome_txt', String)
-    serie = Column('serie_txt', String)

@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy import Column, Integer, String, DateTime
-from superconfronto.models.base import Base, get_session
+from superconfronto.models.base import Base, get_session, Repository
 
-class AvisoRepository():
+class AvisoRepository(Repository):
     pass
 
 class Aviso(Base, AvisoRepository):

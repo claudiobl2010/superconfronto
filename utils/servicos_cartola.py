@@ -16,7 +16,8 @@ class ServicosCartola():
             curl.setopt(pycurl.WRITEFUNCTION, content_io.write)
             curl.perform()
             response = content_io.getvalue()
-            return simplejson.loads(response)
+            response_json = simplejson.loads(response)
+            return response_json if not response_json.get('errors') else None
         except Exception, e:
             logging.exception(e)
             raise e
@@ -31,7 +32,8 @@ class ServicosCartola():
             curl.setopt(pycurl.WRITEFUNCTION, content_io.write)
             curl.perform()
             response = content_io.getvalue()
-            return simplejson.loads(response)
+            response_json = simplejson.loads(response)
+            return response_json if not response_json.get('errors') else None
         except Exception, e:
             logging.exception(e)
             raise e
@@ -46,7 +48,8 @@ class ServicosCartola():
             curl.setopt(pycurl.WRITEFUNCTION, content_io.write)
             curl.perform()
             response = content_io.getvalue()
-            return simplejson.loads(response)
+            response_json = simplejson.loads(response)
+            return response_json if not response_json.get('errors') else None
         except Exception, e:
             logging.exception(e)
             raise e
@@ -61,7 +64,8 @@ class ServicosCartola():
             curl.setopt(pycurl.WRITEFUNCTION, content_io.write)
             curl.perform()
             response = content_io.getvalue()
-            return simplejson.loads(response)
+            response_json = simplejson.loads(response)
+            return response_json if not response_json.get('errors') else None
         except Exception, e:
             logging.exception(e)
             raise e

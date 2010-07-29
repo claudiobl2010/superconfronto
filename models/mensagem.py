@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy import Column, ForeignKey, Integer, String, DateTime
-from superconfronto.models.base import Base, get_session
+from sqlalchemy.orm import relation
+from superconfronto.models.base import Base, get_session, Repository
+from superconfronto.models.time import Time
 
-class MensagemRepository():
+class MensagemRepository(Repository):
     pass
 
 class Mensagem(Base, MensagemRepository):
@@ -16,3 +18,5 @@ class Mensagem(Base, MensagemRepository):
     mensagem = Column('mensagem_txt', String)
     data = Column('mensagem_dt', DateTime)
     publicado = Column('publicado_bln', String)
+
+    time = relation(Time)

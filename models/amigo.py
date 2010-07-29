@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy import Column, ForeignKey, Integer, DateTime
-from superconfronto.models.base import Base, get_session
+from sqlalchemy.orm import relation
+from superconfronto.models.base import Base, get_session, Repository
+from superconfronto.models.time import Time
 
-class AmigoRepository():
+class AmigoRepository(Repository):
     pass
 
 class Amigo(Base, AmigoRepository):
@@ -15,3 +17,6 @@ class Amigo(Base, AmigoRepository):
     time_id = Column('time_id', Integer, ForeignKey("time.time_id"))
     time_amigo_id = Column('time_amigo_id', Integer, ForeignKey("time.time_id"))
     data = Column('amigo_dt', DateTime)
+    
+    time = relation(Time, primaryjoin=time_id==Time.id)
+    time_amigo = relation(Time, primaryjoin=time_amigo_id==Time.id)

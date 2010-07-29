@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy import Column, ForeignKey, Integer
-from superconfronto.models.base import Base, get_session
+from sqlalchemy.orm import relation
+from superconfronto.models.base import Base, get_session, Repository
+from superconfronto.models.time import Time
 
-class TimeHistoricoRepository():
+class TimeHistoricoRepository(Repository):
     pass
 
 class TimeHistorico(Base, TimeHistoricoRepository):
@@ -16,3 +18,5 @@ class TimeHistorico(Base, TimeHistoricoRepository):
     ano = Column('ano_num', Integer)
     qtd_vitorias = Column('qtd_vitorias_num', Integer)
     qtd_derrotas = Column('qtd_derrotas_num', Integer)
+
+    time = relation(Time)

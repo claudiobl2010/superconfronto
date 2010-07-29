@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy import Column, Integer
-from superconfronto.models.base import Base, get_session
+from superconfronto.models.base import Base, get_session, Repository
 
-class GameRepository():
+class GameRepository(Repository):
     
     ABERTO = 1
     FECHADO = 2
@@ -14,9 +14,11 @@ class GameRepository():
     GAME_OVER = 6
 
     def get_game(self):
-        session = get_session()
-        game = session.query.filter(self.id == 1).one()
-        return game
+        return self.get(1)
+
+        #session = get_session()
+        #game = session.query.filter(self.id == 1).one()
+        #return game
 
 class Game(Base, GameRepository):
     

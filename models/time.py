@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy import Column, ForeignKey, Integer, String, DateTime
-from superconfronto.models.base import Base, get_session
+from sqlalchemy.orm import relation
+from superconfronto.models.base import Base, get_session, Repository
+from superconfronto.models.clube import Clube
 
-class TimeRepository():
+class TimeRepository(Repository):
     pass
 
 class Time(Base, TimeRepository):
@@ -21,6 +23,10 @@ class Time(Base, TimeRepository):
     email = Column('email_txt', String)
     qtd_vitorias = Column('qtd_vitorias_num', Integer)
     qtd_derrotas = Column('qtd_derrotas_num', Integer)
-    criacao = Column('criacao_dt', DateTime)
+    rodada_entrada = Column('rodada_entrada_id', Integer)
+    criacao_cartola = Column('criacao_cartola_dt', DateTime)
+    criacao_superconfronto = Column('criacao_superconfronto_dt', DateTime)
     ultimo_login = Column('ultimo_login_dt', DateTime)
     qtd_login = Column('qtd_login_num', Integer)
+    
+    clube = relation(Clube)

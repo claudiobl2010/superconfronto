@@ -12,7 +12,6 @@ create table clube
 (
 clube_id                     integer             not null,
 nome_txt                     varchar(40)         not null,
-serie_txt                    varchar(1)          not null,
 constraint primary key(clube_id)
 ) engine=InnoDB default charset=utf8;
 
@@ -38,9 +37,12 @@ nome_pessoa_txt              varchar(40)         not null,
 email_txt                    varchar(80)         not null,
 qtd_vitorias_num             integer             not null,
 qtd_derrotas_num             integer             not null,
-criacao_dt                   datetime            not null,
+rodada_entrada_id            integer             not null,
+criacao_cartola_dt           datetime            not null,
+criacao_superconfronto_dt    datetime            not null,
 ultimo_login_dt              datetime            not null,
 qtd_login_num                integer             not null,
+
 constraint primary key(time_id),
 unique key uk_nome_time (nome_txt),
 unique key uk_slug_time (slug_txt),
@@ -51,7 +53,7 @@ constraint foreign key(clube_id) references clube(clube_id)
 create table time_rodada
 (
 time_rodada_id               integer             not null   auto_increment,
-rodada_num                   integer             not null,
+rodada_id                    integer             not null,
 time_id                      integer             not null,
 pontos_num                   float(6,2)          not null,
 qtd_vitorias_num             integer             not null,
@@ -63,7 +65,7 @@ constraint primary key(time_rodada_id)
 create table confronto
 (
 confronto_id                 integer             not null   auto_increment,
-rodada_num                   integer             not null,
+rodada_id                    integer             not null,
 time_casa_id                 integer             not null,
 time_visita_id               integer             not null,
 time_vencedor_id             integer,

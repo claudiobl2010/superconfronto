@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy import Column, ForeignKey, Integer, DateTime
-from superconfronto.models.base import Base, get_session
+from sqlalchemy.orm import relation
+from superconfronto.models.base import Base, get_session, Repository
+from superconfronto.models.time import Time
 
-class ConfrontoRepository():
+class ConfrontoRepository(Repository):
     pass
 
 class Confronto(Base, ConfrontoRepository):
@@ -15,5 +17,9 @@ class Confronto(Base, ConfrontoRepository):
     time_casa_id = Column('time_casa_id', Integer, ForeignKey("time.time_id"))
     time_visita_id = Column('time_visita_id', Integer, ForeignKey("time.time_id"))
     time_vencedor_id = Column('time_vencedor_id', Integer, ForeignKey("time.time_id"))
-    rodada = Column('rodada_num', Integer)
+    rodada = Column('rodada_id', Integer)
     data = Column('confronto_dt', DateTime)
+
+    time_casa = relation(Time, primaryjoin=time_casa_id==Time.id)
+    time_visita = relation(Time, primaryjoin=time_visita_id==Time.id)
+    time_vencedor = relation(Time, primaryjoin=time_vencedor_id==Time.id)
