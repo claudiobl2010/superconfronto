@@ -23,6 +23,7 @@ img {
 
 .sc-barra-header-publicidade-bg {
 	background-color: #F3F3F3;
+	min-width: 960px;
 }
 
 .sc-barra-header-publicidade-conteudo {
@@ -88,6 +89,7 @@ img {
 
 .sc-barra-header-superconfronto-bg {
 	background: transparent url(/media/img/grama2.jpg) repeat-x;
+	min-width: 960px;
 }
 
 .sc-barra-header-superconfronto-conteudo {
@@ -141,6 +143,7 @@ img {
 .sc-barra-header-menu-bg {
 	background: #538428;
 	border-top: solid 1px #114411;
+	min-width: 960px;
 }
 
 .sc-barra-header-menu-conteudo {
@@ -175,6 +178,7 @@ img {
 
 .sc-barra-footer-publicidade-bg {
 	background-color: #538428;
+	min-width: 960px;
 }
 
 .sc-barra-footer-publicidade-conteudo {
@@ -185,6 +189,7 @@ img {
 
 .sc-barra-footer-superconfronto-bg {
 	background-color: #456E20;
+	min-width: 960px;
 }
 
 .sc-barra-footer-superconfronto-conteudo {
@@ -197,6 +202,7 @@ img {
 .sc-corpo-bg {
 	padding-top: 30px;
 	padding-bottom: 30px;
+	min-width: 960px;
 }
 
 .sc-corpo-conteudo {
