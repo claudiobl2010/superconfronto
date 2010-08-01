@@ -3,9 +3,10 @@
 
 import cherrypy
 
-from superconfronto.controller.base import BaseController
+from superconfronto.controller.base import *
 
 class HomeController(BaseController):
     
-    def home(self):
+    @authenticated
+    def home(self, game, time):
         return self.render_to_template("home.html")

@@ -41,38 +41,43 @@ class BaseController():
 
 def authenticated(fn):
     def authenticated_fn(self, *args, **kw):
-        game = Game.get_game()
 
-        if game.status_mercado in [Game.EM_ATUALIZACAO, Game.EM_MANUTENCAO, Game.LIBERADO_PARA_TESTES]:
-            raise cherrypy.HTTPRedirect("/")
-        
+        # Verifica se o contexto esta na session (para verificar se usuário esta logado e autenticado).
         contexto = cherrypy.session.get('contexto')
         if not contexto:
-            raise cherrypy.HTTPRedirect("/")
-        
-        time = contexto.get('time')
-        if not time:
+            cherrypy.session.clear()
             raise cherrypy.HTTPRedirect("/")
 
-        return fn(self, game=game, time=time, *args, **kw)
+        # Verifica o status do game.
+        game = Game().get_game()
+        if game.status_mercado in [Game.EM_ATUALIZACAO, Game.EM_MANUTENCAO, Game.LIBERADO_PARA_TESTES]:
+            cherrypy.session.clear()
+            raise cherrypy.HTTPRedirect("/")
+        
+        # Verifica se usuário tem time no Super Confronto.
+        time = contexto.get('time')
+        if not time:
+            raise cherrypy.HTTPRedirect("/time/cadastro")
+
+        return fn(self, game, time, *args, **kw)
 
     return authenticated_fn
     
 def logged(fn):
     def logged_fn(self, *args, **kw):
-        game = Game.get_game()
-
-        if game.status_mercado in [Game.EM_ATUALIZACAO, Game.EM_MANUTENCAO, Game.LIBERADO_PARA_TESTES]:
-            raise cherrypy.HTTPRedirect("/")
-
+        
+        # Verifica se o contexto esta na session (para verificar se usuário esta logado e autenticado).
         contexto = cherrypy.session.get('contexto')
         if not contexto:
+            cherrypy.session.clear()
             raise cherrypy.HTTPRedirect("/")
 
-        time = contexto.get('dados_login')
-        if not time:
+        # Verifica o status do game.
+        game = Game().get_game()
+        if game.status_mercado in [Game.EM_ATUALIZACAO, Game.EM_MANUTENCAO, Game.LIBERADO_PARA_TESTES]:
+            cherrypy.session.clear()
             raise cherrypy.HTTPRedirect("/")
-
-        return fn(self, game=game, *args, **kw)
+        
+        return fn(self, game, *args, **kw)
 
     return logged_fn

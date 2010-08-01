@@ -3,10 +3,11 @@
 
 import cherrypy
 
-from superconfronto.controller.base import BaseController
+from superconfronto.controller.base import *
 
 class LogoutController(BaseController):
     
-    def logout(self):
+    @logged
+    def logout(self, game):
         cherrypy.session.clear()
         raise cherrypy.HTTPRedirect('/')
