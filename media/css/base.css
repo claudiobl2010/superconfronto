@@ -210,6 +210,13 @@ img {
 	margin: 0 auto;
 }
 
+.sc-corpo-conteudo-principal {
+	width: 950px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 0 auto;
+}
+
 .sc-barra-footer-superconfronto-copyright {
 	background: transparent url(/media/img/logotipo_sporTV.gif) no-repeat;
 	margin: 0 auto;

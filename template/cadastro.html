@@ -2,14 +2,46 @@
 
 <%def name="css()">
 	${parent.css()}
+	<link type="text/css" rel="stylesheet" media="screen" href="/media/css/cadastro.css" />
 </%def>
   
 <%def name="javascript()">
 	${parent.javascript()}
+	<script type="text/javascript" src="/media/js/cadastro.js"></script>
 </%def>
 
 <%! breadcrumb="cadastro" %>
 
 <%def name="content()">
-	Cadastro de time!!!
+
+	<div class="sc-cadastro-bg">
+	
+		<div class="sc-cadastro-header-1">Confirmação de dados</div>
+		<div class="sc-cadastro-header-2">confirme os dados do seu time no Super Confronto</div>
+
+		<div class="sc-cadastro-msg-meio-1">confira aqui quais serão os</div>
+		<div class="sc-cadastro-msg-meio-2">dados do seu time na</div>
+		<div class="sc-cadastro-msg-meio-3">temporada de <span>${temporada}</span></div>
+		
+		<div class="sc-cadastro-info-cartola">
+			<div class="sc-cadastro-info-cartola-texto">${time_cartola['nome']}</div>
+			<div class="sc-cadastro-info-cartola-label">Nome do Time</div>
+			
+			<div class="sc-cadastro-info-cartola-texto">${time_cartola['nome_cartola']}</div>
+			<div class="sc-cadastro-info-cartola-label">Nome do Cartola</div>
+
+			<div class="sc-cadastro-info-cartola-texto">${clube.nome}</div>
+			<div class="sc-cadastro-info-cartola-label">Clube do Coração</div>
+		</div>
+
+		<div class="sc-cadastro-info-superconfronto">
+			<div><input id="id-nome-pessoa" type="text" name="nome_pessoa" class="sc-cadastro-info-superconfronto-texto" /></div>
+			<div class="sc-cadastro-info-superconfronto-label">Nome Pessoal</div>
+
+			<div><input id="id-email" type="text" name="email" class="sc-cadastro-info-superconfronto-texto" /></div>
+			<div class="sc-cadastro-info-superconfronto-label">E-Mail</div>
+		</div>
+	
+	</div>
+
 </%def>

@@ -1,0 +1,125 @@
+.sc-cadastro-bg {
+	background: url("/media/img/bg_cadastro_time.jpg") no-repeat;
+	width: 940px;
+	height: 514px;
+	margin: 0 auto;
+}
+
+.sc-cadastro-header-1 {
+	position: absolute;
+	color: #EEEEDD;
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 14px;
+	margin-left: 40px;
+}
+
+.sc-cadastro-header-2 {
+	position: absolute;
+	color: #666666;
+	font-size: 14px;
+	letter-spacing: -0.5px;
+	margin-top: 39px;
+	margin-left: 40px;
+}
+
+.sc-cadastro-msg-meio-1 {
+	position: absolute;
+	color: #666666;
+	font-size: 26px;
+	font-style: italic;
+	margin-top: 210px;
+	margin-left: 90px;
+	letter-spacing: -1px;
+}
+
+.sc-cadastro-msg-meio-2 {
+	position: absolute;
+	color: #999999;
+	font-size: 22px;
+	font-style: italic;
+	margin-top: 240px;
+	margin-left: 60px;
+	letter-spacing: -1px;
+}
+
+.sc-cadastro-msg-meio-3 {
+	position: absolute;
+	color: #538428;
+	font-size: 30px;
+	font-style: italic;
+	margin-top: 250px;
+	margin-left: 110px;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+
+.sc-cadastro-msg-meio-3 span {
+	color: #114411;
+	font-size: 40px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.sc-cadastro-info-cartola {
+	position: absolute;
+	margin-top: 125px;
+	margin-left: 505px;
+	width: 395px;
+}
+
+.sc-cadastro-info-cartola-texto {
+	background: transparent url(/media/img/bg_caixa_texto_cadastro_disabled.png) no-repeat;
+	font-size: 14px;
+	color: #999999;
+	height: 20px;
+	width: 202px;
+	padding: 6px;
+	font-style: italic;
+	margin-top: 10px;
+	float: left;
+}
+
+.sc-cadastro-info-cartola-label {
+	font-size: 12px;
+	color: #999999;
+	height: 20px;
+	width: 150px;
+	padding: 6px;
+	margin-top: 10px;
+	float: left;
+	margin-left: 10px;
+}
+
+.sc-cadastro-info-superconfronto {
+	border-top: 1px solid #EEEEEE;
+	position: absolute;
+	margin-top: 280px;
+	margin-left: 505px;
+	width: 395px;
+	padding-top: 20px;
+}
+
+.sc-cadastro-info-superconfronto-texto {
+	border: 0;
+	background: transparent url(/media/img/bg_caixa_texto_cadastro.png) no-repeat;
+	font-size: 14px;
+	color: #999999;
+	height: 20px;
+	width: 202px;
+	padding: 4px;
+	font-style: italic;
+	margin-top: 10px;
+	float: left;
+}
+
+.sc-cadastro-info-superconfronto-label {
+	font-size: 12px;
+	color: #999999;
+	height: 20px;
+	width: 150px;
+	padding: 6px;
+	margin-top: 10px;
+	float: left;
+	margin-left: 10px;
+}
