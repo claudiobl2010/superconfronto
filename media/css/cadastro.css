@@ -123,3 +123,9 @@
 	float: left;
 	margin-left: 10px;
 }
+
+.sc-btn-salvar {
+	position: absolute;
+	margin-left: 725px;
+	margin-top: 458px;
+}
