@@ -1,0 +1,11 @@
+.sc-box-msg {
+	height: 80px;
+	background: #333333;
+	display: none;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	opacity: 0.95;
+}
