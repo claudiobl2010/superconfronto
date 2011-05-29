@@ -21,14 +21,17 @@ img {
 	border: 0;
 }
 
-.cabecalho {
+.cabecalho-bg {
 	height: 110px;
 	background-image: url("/media/img/bg_header.jpg");
 }
 
-.conteudo {
-	background: red;
+.cabecalho-bg .cabecalho {
 	margin: 0 auto;
 	height: 110px;
 	width: 960px;
+}
+
+.cabecalho-bg .cabecalho .img-logo {
+	float: left;
 }
