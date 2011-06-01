@@ -6,6 +6,8 @@
 
 a {
 	text-decoration: none;
+	color: #47890B;
+	font-weight: bold;
 }
 
 a:hover {
@@ -21,6 +23,12 @@ img {
 	border: 0;
 }
 
+h1 {
+	color: #FFFFFF;
+	font-size: 14px;
+	text-indent: -9999px;
+}
+
 .cabecalho-bg {
 	height: 110px;
 	background-image: url("/media/img/bg_header.jpg");
@@ -34,4 +42,23 @@ img {
 
 .cabecalho-bg .cabecalho .img-logo {
 	float: left;
+	margin-top: 9px;
+}
+
+.cabecalho-bg .cabecalho .img-logo a {
+    background: url("/media/img/logo_superconfronto.png");
+    cursor: pointer;
+    display: block;
+    height: 90px;
+    width: 574px;
+}
+
+.conteudo-bg {
+}
+
+.conteudo-bg .conteudo {
+	margin: 0 auto;
+	width: 940px;
+	padding: 10px;
+	display: table;
 }
