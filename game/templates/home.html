@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block css %}
+	<link type="text/css" rel="stylesheet" href="/static/css/home.css" />
+{% endblock %}
+	
+{% block js %}
+	<script type="text/javascript" src="/static/js/home.js"></script>
+{% endblock %}
+
+{% block content %}
+	
+	<div class="doc-home">
+
+		<div class="grid-8">
+		
+			<div class="box-ranking">
+				<div class="titulo">
+					<div class="flamula"></div>
+					<div class="rodada">ranking da {{ ranking_rodada }}ª rodada</div>
+				</div>
+				<div class="legenda">
+					<div class="posicao">POS.</div>
+					<div class="time">TIME</div>
+					<div class="pontos">PTS.</div>
+				</div>
+				
+				{% for lt in ligatime %}
+					<div class="times">
+						<div class="posicao">{{ lt.posicao }}º</div>
+						<div class="time">
+							<div class="escudo"><img src="{{ lt.img_escudo_time_peq }}"></div>
+							<div class="nome-time">{{ lt.nome_time }}</div>
+						</div>
+						<div class="pontos">{{ lt.pontos_rod }}</div>
+					</div>
+				{% endfor %}				
+			</div>
+		
+		</div>
+	
+		<div class="grid-4">
+		
+			{% if game.status == 1 %}
+				<div class="box-status-mercado-verde">
+					<div class="msg-status-aberto">Mercado Aberto</div>
+					<div class="fechamento">até {{ game.fechamento|date:"d" }}/{{ game.fechamento|date:"m" }} {{ game.fechamento|date:"H" }}:{{ game.fechamento|date:"i" }}</div>
+				</div>
+			{% endif %}
+
+			{% if game.status == 2 %}
+				<div class="box-status-mercado-vermelho">
+					<div class="msg-status-fechado">Mercado Fechado</div>
+				</div>
+			{% endif %}
+
+			{% if game.status == 3 %}
+				<div class="box-status-mercado-vermelho">
+					<div class="msg-status-fechado">Em Manutenção</div>
+				</div>
+			{% endif %}
+
+			{% if game.status == 4 %}
+				<div class="box-status-mercado-vermelho">
+					<div class="msg-status-fechado">Em Atualização</div>
+				</div>
+			{% endif %}
+
+			{% if game.status == 5 %}
+				<div class="box-status-mercado-vermelho">
+					<div class="msg-status-fechado">Em Atualização</div>
+				</div>
+			{% endif %}
+
+			{% if game.status == 6 %}
+				<div class="box-status-mercado-laranja">
+					<div class="msg-status-game-over">Game Over</div>
+					<div class="ate-a-proxima">até a próxima temporada</div>
+				</div>
+			{% endif %}
+			
+		</div>
+
+		<div class="grid-4">
+		
+			<div class="box-facebook">
+				<div id="fb-root"></div>
+				<script>
+					(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));
+				</script>
+				<div class="fb-like-box" data-href="http://www.facebook.com/superconfronto" data-width="292" data-show-faces="true" data-border-color="#FFFFFF" data-stream="false" data-header="false"></div>				
+			</div>
+			
+		</div>
+		
+		<!-- Atualizacao: {{ game.atualizacao|date:"d" }}/{{ game.atualizacao|date:"m" }}/{{ game.atualizacao|date:"Y" }} {{ game.atualizacao|date:"H" }}:{{ game.atualizacao|date:"i" }}:{{ game.atualizacao|date:"s" }}  -->
+	
+	</div>
+
+{% endblock %}

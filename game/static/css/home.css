@@ -1,0 +1,189 @@
+.doc-home .box-status-mercado-verde {
+    background: url("/static/img/bg_status_mercado_verde.png") repeat scroll 0 0 transparent;
+	width: 300px;
+	height: 100px;
+	display: table;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;	
+}
+
+.doc-home .box-status-mercado-verde .msg-status-aberto {
+    color: #FFFFFF;
+    font-family: 'Trebuchet MS',Arial;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 27px;
+    text-align: center;
+}
+
+.doc-home .box-status-mercado-verde .fechamento {
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: center;
+}
+
+.doc-home .box-status-mercado-vermelho {
+    background: url("/static/img/bg_status_mercado_vermelho.png") repeat scroll 0 0 transparent;
+	width: 300px;
+	height: 100px;
+	display: table;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;	
+}
+
+.doc-home .box-status-mercado-vermelho .msg-status-fechado {
+    color: #FFFFFF;
+    font-family: 'Trebuchet MS',Arial;    
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.doc-home .box-status-mercado-laranja {
+    background: #F3A626;
+	width: 300px;
+	height: 100px;
+	display: table;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;	
+}
+
+.doc-home .box-status-mercado-laranja .msg-status-game-over {
+    color: #572B00;
+    font-family: 'Trebuchet MS',Arial;    
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 27px;
+    text-align: center;
+}
+
+.doc-home .box-status-mercado-laranja .ate-a-proxima {
+    color: #572B00;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.doc-home .box-facebook {
+	display: table;
+	border-top: 2px #4E6E0B solid;
+	border-bottom: 1px #DDDDDD solid;
+	border-left: 1px #DDDDDD solid;
+	border-right: 1px #DDDDDD solid;
+	width: 298px;
+	height: 258px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;	
+}
+
+.doc-home .box-ranking {
+	display: table;
+	border-top: 2px #4E6E0B solid;
+	border-bottom: 1px #DDDDDD solid;
+	border-left: 1px #DDDDDD solid;
+	border-right: 1px #DDDDDD solid;
+	width: 618px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;		
+}
+
+.doc-home .box-ranking .titulo {
+	height: 39px;	
+}
+
+.doc-home .box-ranking .titulo .flamula {
+    background: url("/static/img/flamula.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 39px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 52px;	
+}
+
+.doc-home .box-ranking .titulo .rodada {
+	color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+	float: left;
+	margin-top: 10px;
+}
+
+.doc-home .box-ranking .legenda {
+	background-color: #F7F7F7;
+    border-top: 1px solid #DDDDDD;
+    color: #656565;
+    font-size: 10px;
+    font-weight: bold;
+    height: 33px;
+}
+
+.doc-home .box-ranking .legenda .posicao {
+	float: left;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+}
+
+.doc-home .box-ranking .legenda .time {
+    float: left;
+    padding: 10px;
+}
+
+.doc-home .box-ranking .legenda .pontos {
+    float: right;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    text-align: right;
+    width: 100px;}
+
+.doc-home .box-ranking .times {
+    border-top: 1px solid #DDDDDD;
+    height: 46px;
+}
+
+.doc-home .box-ranking .times .posicao {
+    color: #999999;
+    float: left;
+    font-size: 22px;
+    padding: 10px;
+    text-align: center;
+    width: 50px;    
+}
+
+.doc-home .box-ranking .times .time {
+	float: left;
+}
+
+.doc-home .box-ranking .times .time .escudo {
+	float: left;
+	margin-top: 8px;
+}
+
+.doc-home .box-ranking .times .time .nome-time {
+    color: #47890B;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 14px;
+}
+
+.doc-home .box-ranking .times .pontos {
+    color: #999999;
+    float: right;
+    font-size: 20px;
+    margin-top: 1px;
+    padding: 10px 20px;
+    text-align: right;
+    width: 100px;    
+}

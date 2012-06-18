@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+
+body {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:focus {
+	outline-style: none;
+	outline-width: 0;
+}
+
+img {
+	border: 0;
+}
+
+.grid-4 { 
+	width: 300px;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: table;
+}
+
+.grid-8 { 
+	width: 620px;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: table;
+}
+
+.header {
+    height: 110px;
+	background-image: url("/static/img/bg_header.jpg");
+}
+
+.header .header-container {
+	margin: 0 auto;
+	width: 960px;
+	display: table;
+	text-align: left;
+}
+
+.header .header-container .title {
+	float: left;
+}
+
+.header .header-container .title a h1 {
+	background: url("/static/img/logo_superconfronto.png");
+	color: #FFFFFF;
+	width: 574px;
+	height: 90px;
+    margin-top: 9px;
+	font-size: 14px;
+	text-indent: -9999px;
+}
+
+.header .header-container .twitter {
+	float: right;
+	margin-right: 10px;
+	margin-top: 20px;
+}
+
+.page {
+	background: #FFFFFF;
+}
+
+.page .page-container {
+	margin: 0 auto;
+	width: 960px;
+	border-top: 3px solid #325214;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: table;
+	text-align: left;
+}
+
+.page .page-container .box-msg-error {
+	background: url("/static/img/boneco.png");
+	height: 319px;
+	width: 326;
+	margin: 0 auto;
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
+
+.page .page-container .box-msg-error .codigo {
+    color: #999999;
+    display: table;
+    font-size: 30px;
+    margin-left: 125px;
+    margin-top: 140px;
+    position: absolute;
+}
+
+.page .page-container .box-msg-error .msg {
+    color: #999999;
+    display: table;
+    font-size: 16px;
+    margin-left: 110px;
+    margin-top: 195px;
+    position: absolute;
+}
+
+.footer {
+	background-color: #4E6E0B;
+    height: 70px;
+}
+
+.footer .footer-container {
+	margin: 0 auto;
+	width: 960px;
+	display: table;
+	text-align: left;
+}
+
+.footer .footer-container .copyright {
+    float: left;
+    margin-left: 10px;
+    color: #EEEEEE;
+    font-size: 11px;
+    margin-top: 28px;
+}
+
+.footer .footer-container .email {
+    float: right;
+    margin-right: 10px;
+    color: #EEEEEE;
+    font-size: 11px;
+    margin-top: 28px;
+}
