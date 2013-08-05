@@ -13,8 +13,8 @@ DATABASES = {
     'default': {
         'ENGINE'   : 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME'     : 'superconfronto',           # Or path to database file if using sqlite3.
-        'USER'     : 'usr_sconfronto',           # Not used with sqlite3.
-        'PASSWORD' : 'pwd_sconfronto@32ax9r2p7', # Not used with sqlite3.
+        'USER'     : 'root',                     # Not used with sqlite3.
+        'PASSWORD' : '',                         # Not used with sqlite3.
         'HOST'     : '',                         # Set to empty string for localhost. Not used with sqlite3.
         'PORT'     : '',                         # Set to empty string for default. Not used with sqlite3.
     }
